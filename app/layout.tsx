@@ -1,10 +1,16 @@
-import './globals.css'
+import "./globals.css"
+import { cookies } from "next/headers"
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const nextCookies = cookies()
+  const theme = nextCookies.get("theme")?.value
+
+  console.log(theme)
+
   return (
     <html lang="en">
       <head>
