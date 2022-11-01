@@ -7,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const nextCookies = cookies()
-  const theme = nextCookies.get("theme")?.value
+  const theme = nextCookies.get("theme")?.value || "0"
 
   console.log(theme)
 
