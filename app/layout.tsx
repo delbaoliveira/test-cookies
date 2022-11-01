@@ -8,8 +8,13 @@ export default function RootLayout({
 }) {
   const nextCookies = cookies()
   const theme = nextCookies.get("theme")?.value || "0"
+  const _cookies = cookies()
+  const cartCount = _cookies.get("_cart_count")?.value || "0"
 
-  console.log(theme)
+  console.log(
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    cartCount,
+  )
 
   return (
     <html lang="en">
